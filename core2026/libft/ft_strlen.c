@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
 	int	cnt;
 
@@ -19,8 +21,8 @@ int	ft_strlen(char *s)
 		cnt++;
 	return (cnt);
 }
-
+/*
 int main ()
 {
 	printf("%d", ft_strlen(""));
-}
+}*/

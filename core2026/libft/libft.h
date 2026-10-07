@@ -10,4 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdio.h"
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include "stdio.h"
+# include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
+
+size_t	strlen(const char *s);
+#endif
