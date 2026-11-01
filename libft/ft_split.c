@@ -18,7 +18,6 @@ static long	count_words(char const *s, char c)
 		else
 			i++;
 	}
-	printf("end counter of words\n");
 	return (cnt);
 }
 
@@ -31,20 +30,18 @@ char	**ft_split(char const *s, char c)
 
 	in = 0;
 	i = 0;
-	printf("start malloc\n");
 	cont = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
-	printf("end malloc\n");
 	if (!cont || !s)
 		return (NULL);
-	j = 0;
-	while (s[i])
+	while (s[i] && in < (size_t)count_words(s, c))
 	{
+		while (s[i] && s[i] == c)
+			i++;
+		j = i;
 		while (s[j] && s[j] != c)
-		{
 			j++;
-		}
 		cont[in++] = ft_substr(s, i, j - i);
-		i += j + 1;
+		i = j;
 	}
 	cont[in] = NULL;
 	return (cont);
@@ -52,12 +49,13 @@ char	**ft_split(char const *s, char c)
 /*
 int	main()
 {
-	char	**words = ft_split(" Hello To The Country. ", ' ');
+	char	**words = ft_split("", ' ');
 	int	i = 0;
 	while (words[i])
 	{
 		printf("%d)%s, ",i, words[i]);
 		i++;
 	}
+	printf("%d)%s, ",i, words[i]);
 	printf("\n");
 }*/

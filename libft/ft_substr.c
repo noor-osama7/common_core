@@ -10,9 +10,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (start > ssize)
 	{
-		sub = (char *)malloc(0);
+		sub = (char *)malloc(1);
 		if (!sub)
 			return (NULL);
+		sub[0] = '\0';
 		return (sub);
 	}
 	if (len > ssize - start)

@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int	len_of_num(long n)
+static int	len_of_num(long n)
 {
 	int	len;
 

@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+unsigned int	ft_lstsize(t_list *lst)
 {
 	int	cnt;
 
@@ -10,5 +10,5 @@ int	ft_lstsize(t_list *lst)
 		lst = lst ->next;
 		cnt++;
 	}
-	return (cnt);
+	return ((unsigned int)cnt);
 }

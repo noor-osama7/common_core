@@ -12,27 +12,30 @@
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
+	size_t	dlen;
+	size_t	slen;
+	size_t	res;
 
 	i = 0;
-	if (dsize > 0)
-	{
-		while (src[i] && i < (dsize - ft_strlen(dst) - 1))
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
-	}
-	return (ft_strlen(dst) + sizeof(src) - 1);
+	dlen = ft_strlen(dst);
+	slen = ft_strlen(src);
+	if (size > dlen)
+		res = dlen + slen;
+	else
+		return (size + slen);
+	while (src[i] && dlen < (size - 1))
+		dst[dlen++] = src[i++];
+	dst[dlen] = '\0';
+	return (res);
 }
 /*
 int	main()
 {
 	char	dst[20] = "hello, ";
-	printf("length that should have %d,%d, %d", 
+	printf("length that should have %d,%d, %d, %d", 
 	ft_strlcat(dst, "try to do.", sizeof(dst)),
-	sizeof("try to do."), ft_strlen(dst));
+	sizeof("try to do."), ft_strlen(dst), sizeof(dst));
 }*/
