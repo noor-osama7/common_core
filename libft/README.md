@@ -88,7 +88,6 @@ To use `libft.a` in your own project:
 ### Ai Usage
 
 Use it to help with write the README file and also help with finding resources and information.
-"README.md" 96L, 3517B written 
 
 ### References & Documentation
 
