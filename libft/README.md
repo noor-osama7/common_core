@@ -85,6 +85,11 @@ To use `libft.a` in your own project:
 
 ## Resources
 
+### Ai Usage
+
+Use it to help with write the README file and also help with finding resources and information.
+"README.md" 96L, 3517B written 
+
 ### References & Documentation
 
 - [Linux Man Pages](https://man7.org/linux/man-pages/) – Referenced standard behavior for `libc` functions (`man 3 malloc`, `man 3 string`, etc.).
