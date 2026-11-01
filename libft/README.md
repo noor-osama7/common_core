@@ -53,10 +53,6 @@ The project includes a `Makefile` with standard rules. Run one of the following 
   ```bash
   make
   ```
-- Compile the library including bonus list functions:
-  ```bash
-  make bonus
-  ```
 - Remove object files (`.o`):
   ```bash
   make clean
